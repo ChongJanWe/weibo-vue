@@ -1,0 +1,145 @@
+.bounce-enter-active {
+	animation: bounce-in .5s;
+}
+.bounce-leave-active {
+	animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.list-enter-active, .list-leave-active {
+	transition: all 0.5s;
+}
+.list-enter, .list-leave-to
+	/* .list-leave-active for below version 2.1.8 */ {
+	opacity: 0;
+	transform: translateX(30px);
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+	padding-top: 70px;
+	background: #E5E5E5;
+	.index_nav{
+		border-radius: 0;
+	}
+	.left_container{
+		/*发布微博盒子*/
+		.edit_box{
+			border-radius: 4px;
+			text-align: center;
+			overflow: hidden;
+			.edit_box_item{
+				width: calc(100%/6);
+				height:120px;
+				float: left;
+				padding: 0;
+				font-size: 40px;
+				background: #fff;
+				table{
+					width: 100%;
+					height: 100%;
+				}
+				&.avatar{
+					overflow: hidden;
+					img{
+						width: 100%;
+					}
+				}
+				a{
+					width: 100%;
+					display: block;
+					color: #828282;
+					text-decoration: none;
+					&:hover{
+						color: #535353;
+					}
+				}
+				p{
+					font-size: 20px;
+				}
+			}
+		}
+
+		/* 发布框样式 */
+		.row{
+			position: relative;
+			.pub_box{
+				background: #fff;
+				position: absolute;
+				right:0;
+				width: 80%;
+				z-index: 9;
+				.music_preview_box{
+					text-align: center;
+					.media-left{
+						width: 20%;
+					}
+				}
+				.img_preview_box img,.music_preview_box img{
+					width: 100%;
+				}
+				li.list-group-item{
+					&:hover,&.active{
+						background: #bae1e5;
+					}
+				}
+			}
+		}
+
+
+		// 微博列表
+		.weibo_list{
+			.weibo_list_item{
+				margin: 30px 0;
+				.weibo_avatar{
+					img{
+						width: 40px;
+						height: 40px;
+					}
+				}
+				.weibo_content{
+					.well{
+						background: #fff;
+					}
+					.weibo_imgs{
+						img{
+							width: 100%;
+						}
+					}
+					.weibo_comments_box{
+						.row{
+							margin: 20px 0;
+							.pub_btn{
+								width: 100%;
+							}
+						}
+						.weibo_comments_list{
+							li{
+								img{
+									width: 40px;
+									height:40px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
